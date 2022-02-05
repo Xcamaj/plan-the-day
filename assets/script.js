@@ -2,9 +2,9 @@ var currentDate = moment().format('MMMM Do YYYY, h:mm a');
 var now = document.getElementById('currentDay');
 now.innerHTML = currentDate;
 
+
 var taskAreaTask = document.getElementsByClassName('taskAreaTask');
-var currentHour = parseInt(moment().format('hh'));
-console.log(currentHour)
+var currentHour = parseInt(moment().format('HH'));
 for (var element of taskAreaTask) {
     console.log(element)
     var taskHour = parseInt(element.getAttribute('data-hour'));
@@ -19,6 +19,15 @@ for (var element of taskAreaTask) {
         element.classList.add('future')
     }
 }
+
+var tasks = document.getElementsByTagName('h3')
+var value = taskHour
+
+localStorage.getItem(tasks, value)
+localStorage.setItem(tasks, value)
+
+
+
 
 
 
