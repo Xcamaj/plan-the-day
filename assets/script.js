@@ -6,7 +6,7 @@ now.innerHTML = currentDate;
 var taskAreaTask = document.getElementsByClassName('taskAreaTask');
 var currentHour = parseInt(moment().format('HH'));
 for (var element of taskAreaTask) {
-    console.log(element)
+
     var taskHour = parseInt(element.getAttribute('data-hour'));
 
     if (taskHour < currentHour) {
@@ -20,13 +20,25 @@ for (var element of taskAreaTask) {
     }
 }
 
-var tasks = document.getElementsByTagName('h3')
-var value = taskHour
+var key = document.getElementsByClassName('hours')
+var value = document.getElementsByClassName('taskAreaTask')
 
-localStorage.getItem(tasks, value)
-localStorage.setItem(tasks, value)
+localStorage.setItem(key, value);
+ 
+ 
 
 
+// function saveTasks(){
+// var tasks = document.getElementsByClassName('hour')
+// console.log(tasks)
+// }
+// // var value = taskHour
+
+
+// localStorage.setItem(tasks, value)
+// }
+// console.log(localStorage)
+// // localStorage.getItem(tasks, value)
 
 
 
