@@ -21,8 +21,26 @@ for (var element of taskAreaTask) {
     }
 }
 
-$(".saveBtn").on("click", function () {
-    var value = taskAreaTask
-    var key = document.getElementsByClassName('hours')
-    localStorage.setItem("saveBtnEl", value)
+console.log($(".taskAreaTask").map(function () {
+    
+    Object.values($(this).attr("data-hour")).text=1
+    
+
+}))
+
+/* need data-hour
+** taskAreaTask input
+** need local storage
+** 
+** getitem from local storage
+** correspond that to the map items fro the getattribute so the html is the value of the object from localstorage
+*/
+
+$(".saveBtn").on("click", function (event) {
+    event.preventDefault()
+    var saveTask = $(this).siblings()[1].value
+    //var value = JSON.stringify(taskAreaTask)
+    var key = event.target.getAttribute('data-hour')
+    console.log(key, event.target)
+    localStorage.setItem(key, saveTask)
 })
