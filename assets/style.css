@@ -6,10 +6,9 @@ body {
 
 textarea{
   background: transparent;
-  border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
+  border: 1px solid black;
   padding: 10px;
   width: 100%;
   
@@ -18,11 +17,12 @@ textarea{
 h3 {
     margin-bottom: auto;
     padding: 5px;
+    background: linear-gradient(45deg, #007effbf, transparent);
 }
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background: linear-gradient(45deg, rgb(173 213 255), transparent);
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
@@ -46,7 +46,8 @@ h3 {
 .hour {
   background-color: #ffffff;
   color: #000000;
-  border-top: 1px dashed #000000;
+  border: 1px solid #000000;
+  width: 60px;
 }
 
 .past {
@@ -70,6 +71,7 @@ h3 {
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  width: 40px;
 }
 
 .saveBtn i:hover {
@@ -79,4 +81,5 @@ h3 {
 
 .card {
     flex-direction: row;
+    border: none;
 }

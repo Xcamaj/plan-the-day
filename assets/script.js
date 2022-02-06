@@ -3,6 +3,7 @@ var now = document.getElementById('currentDay');
 now.innerHTML = currentDate;
 
 
+
 var taskAreaTask = document.getElementsByClassName('taskAreaTask');
 var currentHour = parseInt(moment().format('HH'));
 for (var element of taskAreaTask) {
@@ -20,31 +21,8 @@ for (var element of taskAreaTask) {
     }
 }
 
-var key = document.getElementsByClassName('hours')
-var value = document.getElementsByClassName('taskAreaTask')
-
-localStorage.setItem(key, value);
- 
- 
-
-
-// function saveTasks(){
-// var tasks = document.getElementsByClassName('hour')
-// console.log(tasks)
-// }
-// // var value = taskHour
-
-
-// localStorage.setItem(tasks, value)
-// }
-// console.log(localStorage)
-// // localStorage.getItem(tasks, value)
-
-
-
-
-
-
-// console.log(taskHour)
-// console.log({taskAreaTask});
-// console.log(currentHour);
+$(".saveBtn").on("click", function () {
+    var value = taskAreaTask
+    var key = document.getElementsByClassName('hours')
+    localStorage.setItem("saveBtnEl", value)
+})
