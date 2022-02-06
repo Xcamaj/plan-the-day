@@ -15,9 +15,11 @@ textarea{
 }
 
 h3 {
-    margin-bottom: auto;
-    padding: 5px;
-    background: linear-gradient(45deg, #007effbf, transparent);
+  margin-bottom: auto;
+  padding: 5px;
+  background: linear-gradient(45deg, #007effbf, transparent);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 .jumbotron {
